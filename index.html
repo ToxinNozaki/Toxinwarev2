@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toxinware</title>
+    <link rel="icon" href="TOXINWARELGOO.png" type="image/x-icon">
+    <link rel="shortcut icon" href="TOXINWARELGOO.png" type="image/x-icon">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            cursor: url(TOXINWARELGOO.png), auto; /* Replace "TOXINWARELGOO.png" with the path to your custom cursor image */
+        }
+
+        #intro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #play-button {
+            padding: 15px 30px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #video-background {
+            width: 20%;
+            height: 20%;
+            object-fit: cover;
+            position: relative;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        #link-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            margin-top: 10px; /* Adjust the margin-top value as needed */
+        }
+
+        .link-button {
+            padding: 10px 20px;
+            background-color: #ffffff00;
+            color: white;
+            border: none;
+            font-size: 18px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function playAudio() {
+            var audio = new Audio('audio-editor-output.mp3');
+            audio.play();
+            document.getElementById('intro').remove();
+            document.getElementById('video-background').play();
+        }
+    </script>
+</head>
+<body>
+    <div id="intro">
+        <button id="play-button" onclick="playAudio()">click to enter</button>
+    </div>
+
+    <div id="content">
+            <img src="TOXINWARELGOO.png" alt="Girl in a jacket">
+        </img>
+        <div id="link-buttons">
+            <a href="https://discord.gg/hHVvb3Szn4" class="link-button">Discord</a>
+            <a href="soon.html" class="link-button">Download</a>
+            <a href="https://www.youtube.com/channel/UC2g8Uhw9NB_54pWdB12k9rA" class="link-button">YouTube</a>
+        </div>
+    </div>
+</body>
+</html>
